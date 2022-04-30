@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portpolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    @import 'utilities.css';
+        :root{
+            --primary:#6dceae;
+            --dark:#006161;
+            --pure:#FFFFFF;
+            --ternary:#444444;
+            --light:#fdf9f9;
+            --new:#092422;
+            --aon:#1fbb99;
+            --th:#272727;
+            
+        }
+        body{
+            font-family: 'poppins',sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-font-smotthing:antialiased;
+        }
+        
+        header{
+            background: var(--new);
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 100% 100%, 0% 100%);
+        }
+        .container{
+            max-width: 1152px;
+            padding:0 15px;
+            margin:0 auto;
+        }
+        
+        header nav .left a{
+            color: var(--pure);
+            text-decoration: none;
+            margin-right: 2rem;
+            text-transform: uppercase;
+            transition: all .3s ease;
+        }
+        header nav .left a:hover{
+            color:var(--aon);
+        }
+        header nav{
+        padding: 2rem 0;
+        }
+        header nav .branding{
+            margin-right:3rem ;
+        }
+        .hero{
+            padding:1.2rem 0 ;
+        }
+        .hero .right img{
+            width: 470px;
+            height: 600px;
+        }
+        .hero .left{
+            color:var(--pure) ;
+        }
+        .hero .left h6{
+            font-size: 3.2rem; 
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .hero .left h1{
+            font-size: 2.5rem;
+            font-weight:101;
+            line-height:1.2;
+            margin-bottom:2rem;
+        }
+        .hero .left h1 span{
+            color: var(--primary);
+        }
+        .hero .left p{
+            line-height: 2 ;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+        }
+        .hero .left{
+            margin-top: 8rem;
+        }
+        
+        section{
+            padding: 6rem o;
+        }
+        .container{
+            max-width: 1152px;
+            padding:0 15px;
+            margin:0 auto;
+        }
+        section.about .about-me-img{
+            height: 480px;
+            width: 400px;
+            margin-bottom: .5rem;
+            margin-top: 1rem;
+        }
+        section.about h1{
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 101;
+            
+        }
+        section.about h1 span{
+            color: var(--aon);
+        }
+        
+        section.about h3{
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 250;
+        }
+        section.about p{
+            font-family: 'Lato',sans-serif;
+            font-size: 1.2rem;
+            color: var(--ternary);
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+        section.about .social{
+            display: flex;
+        }
+        section.about .social a{
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 55%;
+            margin-right: 0.6rem ;
+            transition: all 0.3s ease;
+        }
+        section.about .social a:hover{
+            background: var(--th);
+        }
+        section.about .social a img{
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+        }
+        
+        .section-heading h1{
+            color: var(--th);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            line-height: 0.1;
+            font-size: 1.8rem;
+        }
+        .section-heading span{
+            color: var(--th);
+        }
+        .section-heading + p{
+            color: var(--pure);
+            font-size: 1.2rem;
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        section.skills{
+            background: var(--aon);
+        }
+        section.skills .card-wrapper{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 2rem;
+            grid-row-gap: 2.8rem;
+        }
+        section.skills .card-wrapper .card{
+            background: var(--pure);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            position: relative;
+            padding-top: 5rem;
+            text-align: center;
+            transition: all .3s ease;
+            margin-bottom: 4rem;
+        }
+        section.skills .card-wrapper .card img{
+            position: absolute;
+            top: -3.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        section.skills .card-wrapper .card h2{
+            font-weight: 600;
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+        section.skills .card-wrapper .card p{
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            color: var(--ternary);
+            line-height: 1.2;
+        }
+        section.skills .card-wrapper .card:hover{
+            background: var(--dark);
+        }
+        section.skills .card-wrapper .card:hover h2, section.skills .card-wrapper .card:hover p{
+            color: var(--pure);
+        }
+        .section-heading{
+            color: var(--pure);
+            text-align: center;
+            margin-bottom: 0.1rem;
+            
+            line-height: 2;
+            font-size: 2rem;
+        }
+        .section-heading span1 {
+            color: var(--aon);
+        }
+        .section-heading + h5{
+            color: var(--light);
+            font-size: 1.2rem;
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        section.achievement{
+            background: var(--th);
+        }
+        section.achievement .card-wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1.5rem;
+        }
+        section.achievement .card-wrapper .card{
+            position: relative;
+            height: 250px;
+            margin-bottom: 4rem;
+        }
+        
+        
+        section.achievement .card-wrapper .card .overlay a{
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        section.achievement .card-wrapper .card img{
+            height: 100%;
+            width: 100%;
+        }
+        
+        .section-heading{
+            color: var(--aon);
+            text-align: center;
+        }
+        section.span2{
+            color: var(--aon);
+        }
+        section.contact .card-wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 3rem;
+        }
+        section.contact .card-wrapper .card{
+            text-align: center;
+        }
+        section.contact .card-wrapper .card img{
+            margin-bottom: 3rem;
+        }
+        section.contact .card-wrapper .card h1{
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        section.contact .card-wrapper .card h6{
+            font-size: 1rem;
+            color: var(--ternary);
+            font-weight: 400;
+            margin-bottom: 4rem;
+        }
+        
+        section.contact .input-wrap{
+            display: grid;
+            border-radius: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        section.contact .input-wrap-2{
+            display: flex;
+            flex-direction: column;
+        }
+        section.contact .input-wrap-2 input{
+            margin-bottom: 2rem;
+        }
+        section.contact input{
+            padding: 0.5rem;
+            border: 1px solid var(--new);
+            font-size: 0.9rem;
+        }
+        section.contact .input-wrap-2 textarea{
+            padding: 0.5rem;
+            border: 1px solid var(--new);
+            font-size: 0.9rem;
+        }
+        section.contact .input-wrap-2 textarea:focus, section.contact input:focus{
+            outline: none;
+        }
+        section.contact .btn-wrapper{
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        footer{
+            background: var(--th);
+            text-align: center;
+            padding: 3rem 0;
+        }
+        footer .copyright{
+            font-size: 1.2rem;
+            font-weight: 200;
+            color: var(--pure);
+        }
+        </style>
+
+        <style>
+            .flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    padding: 0.5rem 2rem ;
+    font-size: 1rem; 
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.btn-primary{
+    background: var(--primary);
+    color: var(--secondary);
+}
+.btn-primary:hover{
+ background: transparent;
+ border-color: var(--primary);
+ color: var(--primary);
+}
+.btn-secondary{
+    background: transparent;
+    color:var(--primary);
+    border-color:var(--primary);
+}
+.btn-secondary:hover{
+    background:var(--primary);
+    color:var(--secondary);
+}
+
+
+.flex-1{
+    flex:1;
+}
+.justify-center{
+    justify-content: center;
+}
+        </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-center justify-between">
+                <div class="left flex iteam-center">
+                    <div>
+                        <a href="#">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#achivement">Projects</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#contact"><button class=
+                        "btn btn-primary">Contact</button></a>
+                </div>
+            </nav>
+            <div class="hero flex iteam-center justify-between">
+                <div class="left flex-1">
+                    <h6>Yash Pagar</h6>
+                    <h1>I'm a Software <span>Developer</span></h1>
+                    <p>The Software development is an strategic approch to website design and creativity.
+                        I am always excited for the new projects and explore the new concepts.</p>
+                    <div>
+                        <button class="btn btn-secondary">DOWNLOD CV</button>
+                    </div>
+                </div>
+                <div class="right flex-1 flex justify-center">
+                    <img src="IMG_20220424_155312.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container"></div>
+        <div class="container flex items-center">
+            <div class="flex-1">
+                <img class="about-me-img" src="IMG-20210824-WA0005.jpg" alt="">
+            </div>
+            <div class="flex-1">
+                <h1>About <span>Me ,</span></h1>
+                <h3>Hello! I'm Yash Pagar</h3>
+                <p>I am pursuing Bachelor's degree in Information Technology at Nutan Maharashtra Institute of Engineering and Technology
+                    (SPPU).Having keen interest in software developmen.I am also spending my spare time in developing my
+                    personality by focusing on emotional intelligence,business management and leadership.Also explore
+                    the new concepts of technology.I am passionate about learning, exploring and maintaining integrity
+                    through honest work.</p>
+                <div class="social">
+                    <a href="#"><img src="facebook.png" alt=""></a>
+                    <a href="#"><img src="instagram.png" alt=""></a>
+                    <a href="#"><img src="pintrest.png" alt=""></a>
+                    <a href="#"><img src="twitter.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h1 class="section-heading"><span> My Skills</span></h1>
+            <p>Skills made extra special !</p>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h2>HTML</h2>
+                    <p>(Advance)</p>
+                </div>
+                <div class="card">
+                    <h2>CSS</h2>
+                    <p>(Intermediate)</p>
+                </div>
+                <div class="card">
+                    <h2>C++</Script>
+                    </h2>
+                    <p>(Advance)</p>
+                </div>
+                <div class="card">
+                    <h2>java</h2>
+                    <p>(Beginner)</p>
+                </div>
+                <div class="card">
+                    <h2>Python</h2>
+                    <p>(Beginner)</p>
+                </div>
+                <div class="card">
+                    <h2>SQL</h2>
+                    <p>(Advance)</p>
+                </div>
+                <div class="card">
+                    <h2>Android Studio</h2>
+                    <p>(Beginner)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="achivement" class="achievement">
+        <div class="container">
+            <h1 class="section-heading">My projects</h1>
+            <h5>Some of the recent projects</h5>
+
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="overlay">
+                    </div>
+                    <img src="JavaQuizApp.png" alt="">
+                </div>
+                <div class="card">
+                    <div class="overlay">
+                    </div>
+                    <img src="KgToPoundConverterApp.png" alt="">
+                </div>
+                <!-- <div class="card">
+                    <div class="overlay">
+                    </div>
+                    <img src="tcs cer.jpg" alt="">
+                </div> -->
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h4 class="section-heading">Contact <span>Me</span></h4>
+            <p>For all enquiries, please contact me using the form below</p>
+            <div class="card-wrapper">
+                <div class="card">
+                    <h2>Call Me On</h2>
+                    <h6>+91 9075988462</h6>
+                </div>
+                <div class="card">
+                    <h2>Email Me At</h2>
+                    <h6>yashpagar007@gmail.com</h6>
+                </div>
+                <div class="card">
+                    <h2>Address</h2>
+                    <h6>Walhekarwadi, Chinchwad, Pune - 411033</h6>
+                </div>
+            </div>
+            <div class="input-wrap">
+                <input type="text" placeholder="Your Name *">
+                <input type="email" placeholder="Your Email *">
+            </div>
+            <div class="input-wrap-2">
+                <input type="text" placeholder="Your Subject...">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+            </div>
+            <div class="btn-wrapper">
+                <button1 class="btn btn-primary">Send Message</button1>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyright">
+            Copyright 2022 &copy; YashBPagar Template. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
